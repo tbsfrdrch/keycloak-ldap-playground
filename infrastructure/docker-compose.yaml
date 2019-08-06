@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  openldap:
+    image: osixia/openldap:1.2.4
+    ports:
+      - 389:389
+      - 636:636
+    environment:
+      - LDAP_ADMIN_PASSWORD=password
+      - LDAP_ORGANISATION=Starfleet
+      - LDAP_DOMAIN=starfleet.federation.org
+    volumes:
+      - ./ldif:/container/service/slapd/assets/config/bootstrap/ldif/custom/
+    command: --copy-service --loglevel debug
+  keycloak:
+    image: jboss/keycloak
+    depends_on:
+      - openldap
+    environment:
+      - KEYCLOAK_USER=keycloak
+      - KEYCLOAK_PASSWORD=password
+    ports:
+      - 8080:8080
