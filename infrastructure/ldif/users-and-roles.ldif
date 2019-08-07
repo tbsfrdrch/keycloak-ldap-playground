@@ -8,7 +8,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-uid: picard
 cn: Jean-Luc
 sn: Picard
 userPassword: password
@@ -18,7 +17,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-uid: riker
 cn: William
 sn: Riker
 userPassword: password
@@ -28,7 +26,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-uid: data
 cn: Data
 sn: -
 userPassword: password
@@ -38,7 +35,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-uid: worf
 cn: Worf
 sn: -
 userPassword: password
@@ -48,7 +44,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-uid: tasha
 cn: Tasha
 sn: Yar
 userPassword: password
@@ -58,7 +53,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-uid: deanna
 cn: Deanna
 sn: Troi
 userPassword: password
@@ -82,42 +76,35 @@ ou: Roles
 dn: cn=ANDROID,ou=Roles,ou=Enterprise,ou=Ships,{{ LDAP_BASE_DN }}
 objectclass: top
 objectclass: groupOfUniqueNames
-cn: ANDROID
 uniqueMember: uid=data,ou=users,{{ LDAP_BASE_DN }}
 
 dn: cn=KLINGON,ou=Roles,ou=Enterprise,ou=Ships,{{ LDAP_BASE_DN }}
 objectclass: top
 objectclass: groupOfUniqueNames
-cn: KLINGON
 uniqueMember: uid=worf,ou=users,{{ LDAP_BASE_DN }}
 
 dn: cn=CAPTAIN,ou=Roles,ou=Enterprise,ou=Ships,{{ LDAP_BASE_DN }}
 objectclass: top
 objectclass: groupOfUniqueNames
-cn: CAPTAIN
 uniqueMember: uid=picard,ou=users,{{ LDAP_BASE_DN }}
 
 dn: cn=COMMANDING_OFFICER,ou=Roles,ou=Enterprise,ou=Ships,{{ LDAP_BASE_DN }}
 objectclass: top
 objectclass: groupOfUniqueNames
-cn: COMMANDING_OFFICER
 uniqueMember: uid=riker,ou=users,{{ LDAP_BASE_DN }}
 
 dn: cn=SECURITY_OFFICER,ou=Roles,ou=Enterprise,ou=Ships,{{ LDAP_BASE_DN }}
 objectclass: top
 objectclass: groupOfUniqueNames
-cn: SECURITY_OFFICER
 uniqueMember: uid=worf,ou=users,{{ LDAP_BASE_DN }}
 uniqueMember: uid=tasha,ou=users,{{ LDAP_BASE_DN }}
 
 dn: cn=OPERATIONS_OFFICER,ou=Roles,ou=Enterprise,ou=Ships,{{ LDAP_BASE_DN }}
 objectclass: top
 objectclass: groupOfUniqueNames
-cn: OPERATIONS_OFFICER
 uniqueMember: uid=data,ou=users,{{ LDAP_BASE_DN }}
 
 dn: cn=COUNSELOR,ou=Roles,ou=Enterprise,ou=Ships,{{ LDAP_BASE_DN }}
 objectclass: top
 objectclass: groupOfUniqueNames
-cn: COUNSELOR
 uniqueMember: uid=deanna,ou=users,{{ LDAP_BASE_DN }}
