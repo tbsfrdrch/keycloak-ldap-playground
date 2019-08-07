@@ -18,6 +18,63 @@
       "protocol": "openid-connect"
     }
   ],
+  "roles": {
+    "realm": [
+      {
+        "name": "ANDROID",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "starfleet",
+        "attributes": {}
+      },
+      {
+        "name": "KLINGON",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "starfleet",
+        "attributes": {}
+      },
+      {
+        "name": "HUMAN",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "starfleet",
+        "attributes": {}
+      }
+    ]
+  },
+  "groups": [
+    {
+      "name": "Android",
+      "path": "/Android",
+      "attributes": {},
+      "realmRoles": [
+        "ANDROID"
+      ],
+      "clientRoles": {},
+      "subGroups": []
+    },
+    {
+      "name": "Human",
+      "path": "/Human",
+      "attributes": {},
+      "realmRoles": [
+        "HUMAN"
+      ],
+      "clientRoles": {},
+      "subGroups": []
+    },
+    {
+      "name": "Klingon",
+      "path": "/Klingon",
+      "attributes": {},
+      "realmRoles": [
+        "KLINGON"
+      ],
+      "clientRoles": {},
+      "subGroups": []
+    }
+  ],
   "components": {
     "org.keycloak.storage.UserStorageProvider": [
       {
@@ -169,6 +226,49 @@
                 ],
                 "role.object.classes": [
                   "groupOfUniqueNames"
+                ]
+              }
+            },
+            {
+              "name": "group",
+              "providerId": "group-ldap-mapper",
+              "subComponents": {},
+              "config": {
+                "mode": [
+                  "READ_ONLY"
+                ],
+                "membership.attribute.type": [
+                  "DN"
+                ],
+                "user.roles.retrieve.strategy": [
+                  "LOAD_GROUPS_BY_MEMBER_ATTRIBUTE"
+                ],
+                "group.name.ldap.attribute": [
+                  "cn"
+                ],
+                "ignore.missing.groups": [
+                  "false"
+                ],
+                "preserve.group.inheritance": [
+                  "true"
+                ],
+                "membership.user.ldap.attribute": [
+                  "uid"
+                ],
+                "membership.ldap.attribute": [
+                  "uniqueMember"
+                ],
+                "memberof.ldap.attribute": [
+                  "memberOf"
+                ],
+                "group.object.classes": [
+                  "groupOfUniqueNames"
+                ],
+                "groups.dn": [
+                  "ou=Groups,dc=starfleet,dc=federation,dc=org"
+                ],
+                "drop.non.existing.groups.during.sync": [
+                  "false"
                 ]
               }
             },
