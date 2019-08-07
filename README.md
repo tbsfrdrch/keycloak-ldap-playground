@@ -19,6 +19,15 @@
   * Select the `infrastructure/realm-starfleet.json` file as import file
   * Press `Create`
 
+## Inspecting the LDAP directory
+
+* Install e.g. [Apache Directory Studio](https://directory.apache.org/studio/downloads.html)
+* Connect to Open LDAP
+  * Host: `localhost`
+  * Port: `389`
+  * BindDN / Username: `cn=admin,dc=starfleet,dc=federation,dc=org`
+  * Password: `password`
+
 ## Starting the application
 
 * `cd` back to the checkout folder
