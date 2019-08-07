@@ -31,6 +31,12 @@ public class EnterpriseController {
         return "FUNCTIONAL";
     }
 
+    @GetMapping("/warp/core/eject")
+    @RolesAllowed("SECURITY_OFFICER")
+    public String warpCoreEject() {
+        return "EJECT";
+    }
+
     @GetMapping("/security")
     @Secured("ROLE_SECURITY_OFFICER")
     public String securityStatus() {

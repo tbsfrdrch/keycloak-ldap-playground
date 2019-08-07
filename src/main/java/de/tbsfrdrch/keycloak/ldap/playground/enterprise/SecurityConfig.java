@@ -45,7 +45,7 @@ class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
         http.authorizeRequests()
-                .antMatchers("/warp*").hasRole("OPERATIONS_OFFICER")
+                .antMatchers("/warp/**").hasRole("OPERATIONS_OFFICER")
                 .anyRequest().authenticated();
     }
 }
