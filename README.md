@@ -51,3 +51,7 @@ Use the [logout](http://localhost:8081/logout) endpoint to logout a user again.
 | tasha  | `SECURITY_OFFICER`              |
 | deanna | `COUNSELOR`                     |
 
+## Links
+
+* [A Quick Guide to Using Keycloak with Spring Boot](https://www.baeldung.com/spring-boot-keycloak)
+* [Mapping LDAP Group and Roles to RedHat SSO Keycloak](http://www.janua.fr/mapping-ldap-group-and-roles-to-redhat-sso-keycloak/)
