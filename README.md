@@ -42,14 +42,14 @@ Use the [logout](http://localhost:8081/logout) endpoint to logout a user again.
 
 (every user's password is `password`)
 
-| User   | Role(s)                         |
-| :----- | :------------------------------ |
-| picard | `CAPTAIN`                       |
-| riker  | `COMMANDING_OFFICER`            |
-| data   | `OPERATIONS_OFFICER`, `ANDROID` |
-| worf   | `SECURITY_OFFICER`, `KLINGON`   |
-| tasha  | `SECURITY_OFFICER`              |
-| deanna | `COUNSELOR`                     |
+| User   | LDAP Role            | Group-inferred Role |
+| :----- | :------------------- | :------------------ |
+| picard | `CAPTAIN`            | `HUMAN`             |
+| riker  | `COMMANDING_OFFICER` | `HUMAN`             |
+| data   | `OPERATIONS_OFFICER` | `ANDROID`           |
+| worf   | `SECURITY_OFFICER`   | `KLINGON`           |
+| tasha  | `SECURITY_OFFICER`   | `HUMAN`             |
+| deanna | `COUNSELOR`          | `HUMAN`             |
 
 ## Links
 
